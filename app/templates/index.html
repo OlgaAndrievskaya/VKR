@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Соотношение матрица-наполнитель</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 255px;
+        text-align: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+
+      input[type="number"] {
+        display: inline-block;
+        width: 100px;
+      }
+
+      .submit-button {
+        background-color: #065CAB;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 0px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .submit-button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Введите параметры для предсказания соотношения матрица-наполнитель</h2>
+    <form method="POST" action="/predict">
+      <label>Плотность, кг/м3:</label>
+      <input type="number" name="Плотность, кг/м3" step="0.01" required>
+      <br>
+      <label>Модуль упругости, ГПа:</label>
+      <input type="number" name="Модуль упругости, ГПа" step="0.01" required>
+      <br>
+      <label>Количество отвердителя, м.%:</label>
+      <input type="number" name="Количество отвердителя, м.%" step="0.01" required>
+      <br>
+      <label>Содержание эпоксидных групп, %_2:</label>
+      <input type="number" name="Содержание эпоксидных групп, %_2" step="0.01" required>
+      <br>
+      <label>Температура вспышки, С_2:</label>
+      <input type="number" name="Температура вспышки, С_2" step="0.01" required>
+      <br>
+      <label>Поверхностная плотность, г/м2:</label>
+      <input type="number" name="Поверхностная плотность, г/м2" step="0.01" required>
+      <br>
+      <label>Потребление смолы, г/м2:</label>
+      <input type="number" name="Потребление смолы, г/м2" step="0.01" required>
+      <br>
+      <label>Угол нашивки, град:</label>
+      <input type="number" name="Угол нашивки, град" step="0.01" required>
+      <br>
+      <label>Шаг нашивки:</label>
+      <input type="number" name="Шаг нашивки" step="0.01" required>
+      <br>
+      <label>Плотность нашивки:</label>
+      <input type="number" name="Плотность нашивки" step="0.01" required>
+      <br>
+      <input type="submit" value="Предсказать" class="submit-button">
+    </form>
+    <br>
+    <h2>Соотношение матрица-наполнитель:</h2>
+    <p>{{prediction}}</p>
+  </body>
+</html>
