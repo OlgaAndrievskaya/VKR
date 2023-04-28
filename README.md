@@ -48,4 +48,4 @@
 
 ## Автор
 
-* **Андриевская Ольга** - (https://github.com/OlgaAndrievskaya)
+**Андриевская Ольга** - (https://github.com/OlgaAndrievskaya)
